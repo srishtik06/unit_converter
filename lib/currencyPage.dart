@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class LengthPage extends StatefulWidget {
-  const LengthPage({super.key});
+class currencyPage extends StatefulWidget {
+  const currencyPage({super.key});
 
   @override
-  State<LengthPage> createState() => _LengthPageState();
+  State<currencyPage> createState() => _currencyPageState();
 }
 
-class _LengthPageState extends State<LengthPage> {
-  String selectedUnit = 'Meters';
-  String selectedUnit1 = 'Centimeters';
+class _currencyPageState extends State<currencyPage> {
+  String selectedUnit = 'Rupees';
+  String selectedUnit1 = 'Dollars';
   double inputValue = 0.0;
   double result = 0.0;
   final Map<String, double> conversionFactors = {
@@ -51,7 +51,7 @@ class _LengthPageState extends State<LengthPage> {
             child: const Padding(
               padding: EdgeInsets.fromLTRB(40, 90, 0, 0),
               child: Text(
-                'Length',
+                'Currency',
                 style: TextStyle(
                   fontSize: 40,
                   color: Color(0xFF314A69),
@@ -100,7 +100,7 @@ class _LengthPageState extends State<LengthPage> {
                           convert();
                         });
                       },
-                      items: <String>['Meters', 'Feet', 'Inches', 'Centimeters']
+                      items: <String>['Rupees', 'Dollars', 'Dirham']
                           .map((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
@@ -190,7 +190,7 @@ class _LengthPageState extends State<LengthPage> {
                           selectedUnit1 = newValue!;
                         });
                       },
-                      items: <String>['Meters', 'Feet', 'Inches', 'Centimeters']
+                      items: <String>['Rupees', 'Dollars', 'Dirham']
                           .map((String value) {
                         return DropdownMenuItem<String>(
                           value: value,

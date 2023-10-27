@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:converter_app/utilities.dart';
 import 'package:converter_app/LengthPage.dart';
-
+import 'package:converter_app/weightPage.dart';
+import 'package:converter_app/tempPage.dart';
+import 'package:converter_app/timePage.dart';
+import 'package:converter_app/speedPage.dart';
+import 'package:converter_app/currencyPage.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -46,7 +50,7 @@ class _homePageState extends State<homePage> {
 
 
 
-                unitBlock(Color(0xffb620e1), 'Weight', size.width*0.35,size.width*0.39, context, LengthPage()),
+                unitBlock(Color(0xffb620e1), 'Weight', size.width*0.35,size.width*0.39, context, weightPage()),
               ],
             ),
 
@@ -55,9 +59,9 @@ class _homePageState extends State<homePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                unitBlock(Color(0xff13b3d7), 'Temperature', size.width*0.35,size.width*0.39, context, LengthPage()),
+                unitBlock(Color(0xff13b3d7), 'Temperature', size.width*0.35,size.width*0.39, context, tempPage()),
 
-                unitBlock(Color(0xffffb94d), 'Time', size.width*0.35,size.width*0.39, context, LengthPage())
+                unitBlock(Color(0xffffb94d), 'Time', size.width*0.35,size.width*0.39, context, timePage())
               ],
             ),
 
@@ -66,9 +70,9 @@ class _homePageState extends State<homePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                unitBlock(Color(0xfffd5d2d), 'Speed', size.width*0.35,size.width*0.39, context, LengthPage()),
+                unitBlock(Color(0xfffd5d2d), 'Speed', size.width*0.35,size.width*0.39, context, speedPage()),
 
-                unitBlock(Color(0xff8ad53c), 'Currency', size.width*0.35,size.width*0.39, context, LengthPage())
+                unitBlock(Color(0xff8ad53c), 'Currency', size.width*0.35,size.width*0.39, context, currencyPage())
               ],
             ),
           ],

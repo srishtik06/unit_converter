@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class LengthPage extends StatefulWidget {
-  const LengthPage({super.key});
+class weightPage extends StatefulWidget {
+  const weightPage({super.key});
 
   @override
-  State<LengthPage> createState() => _LengthPageState();
+  State<weightPage> createState() => _weightPageState();
 }
 
-class _LengthPageState extends State<LengthPage> {
-  String selectedUnit = 'Meters';
-  String selectedUnit1 = 'Centimeters';
+class _weightPageState extends State<weightPage> {
+  String selectedUnit = 'Kilograms';
+  String selectedUnit1 = 'Grams';
   double inputValue = 0.0;
   double result = 0.0;
   final Map<String, double> conversionFactors = {
@@ -51,7 +51,7 @@ class _LengthPageState extends State<LengthPage> {
             child: const Padding(
               padding: EdgeInsets.fromLTRB(40, 90, 0, 0),
               child: Text(
-                'Length',
+                'Weight',
                 style: TextStyle(
                   fontSize: 40,
                   color: Color(0xFF314A69),
@@ -100,7 +100,7 @@ class _LengthPageState extends State<LengthPage> {
                           convert();
                         });
                       },
-                      items: <String>['Meters', 'Feet', 'Inches', 'Centimeters']
+                      items: <String>['Kilograms', 'Grams', 'Pound']
                           .map((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
@@ -190,7 +190,7 @@ class _LengthPageState extends State<LengthPage> {
                           selectedUnit1 = newValue!;
                         });
                       },
-                      items: <String>['Meters', 'Feet', 'Inches', 'Centimeters']
+                      items: <String>['Kilograms', 'Grams', 'Pound']
                           .map((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
@@ -243,7 +243,7 @@ class _LengthPageState extends State<LengthPage> {
               children: [
                 SizedBox(height: size.height * 0.08),
 
-                const Text('Result',style: TextStyle(
+                Text('Result',style: TextStyle(
                   color: Colors.grey,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -267,7 +267,7 @@ class _LengthPageState extends State<LengthPage> {
                 bottomRight: Radius.circular(25),
               ),
             ),
-            child: const Center(
+            child: Center(
               child: Text('Convert',style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 35,

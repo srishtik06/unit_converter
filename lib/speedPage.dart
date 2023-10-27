@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class LengthPage extends StatefulWidget {
-  const LengthPage({super.key});
+class speedPage extends StatefulWidget {
+  const speedPage({super.key});
 
   @override
-  State<LengthPage> createState() => _LengthPageState();
+  State<speedPage> createState() => _speedPageState();
 }
 
-class _LengthPageState extends State<LengthPage> {
-  String selectedUnit = 'Meters';
-  String selectedUnit1 = 'Centimeters';
+class _speedPageState extends State<speedPage> {
+  String selectedUnit = 'km/hr';
+  String selectedUnit1 = 'm/s';
   double inputValue = 0.0;
   double result = 0.0;
   final Map<String, double> conversionFactors = {
@@ -51,7 +51,7 @@ class _LengthPageState extends State<LengthPage> {
             child: const Padding(
               padding: EdgeInsets.fromLTRB(40, 90, 0, 0),
               child: Text(
-                'Length',
+                'Speed',
                 style: TextStyle(
                   fontSize: 40,
                   color: Color(0xFF314A69),
@@ -100,7 +100,7 @@ class _LengthPageState extends State<LengthPage> {
                           convert();
                         });
                       },
-                      items: <String>['Meters', 'Feet', 'Inches', 'Centimeters']
+                      items: <String>['km/hr', 'm/s']
                           .map((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
@@ -190,7 +190,7 @@ class _LengthPageState extends State<LengthPage> {
                           selectedUnit1 = newValue!;
                         });
                       },
-                      items: <String>['Meters', 'Feet', 'Inches', 'Centimeters']
+                      items: <String>['km/hr', 'm/s']
                           .map((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
