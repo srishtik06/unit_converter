@@ -180,14 +180,9 @@ class _tempPageState extends State<tempPage> {
             Container(
               height: size.height * 0.1,
               width: size.width * 0.8,
-              decoration: const BoxDecoration(
+              decoration:  BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(25),
-                  topRight: Radius.circular(25),
-                  bottomLeft: Radius.circular(25),
-                  bottomRight: Radius.circular(25),
-                ),
+                borderRadius: BorderRadius.circular(25),
               ),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -219,13 +214,18 @@ class _tempPageState extends State<tempPage> {
                       ),),
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
-                      child: Text(
-                        '$result', // Display the result value
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 30,
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Text(
+                            '$result', // Display the result value
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 30,
+                            ),
+                          ),
                         ),
                       ),
                     ),
