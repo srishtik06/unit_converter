@@ -142,7 +142,7 @@ class _LengthPageState extends State<LengthPage> {
                         padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                         child: TextField(
                           keyboardType: TextInputType.number,
-                          style: TextStyle(fontSize: 30,
+                          style: const TextStyle(fontSize: 30,
                           color: Colors.black54),
                           decoration: const InputDecoration(
                             hintText: '0.0',
@@ -230,7 +230,7 @@ class _LengthPageState extends State<LengthPage> {
                           scrollDirection: Axis.horizontal,
                           child: Text(
                             '$result', // Display the result value
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.black54,
                               fontSize: 30,
                             ),

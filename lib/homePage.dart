@@ -19,7 +19,7 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xff324b6a),
+      backgroundColor: const Color(0xff324b6a),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
         child: Column(
@@ -27,13 +27,13 @@ class _homePageState extends State<homePage> {
           children: [
             SizedBox(height: size.height*0.1,),
 
-            Text('easy',style: TextStyle(
+            const Text('easy',style: TextStyle(
               fontSize: 60,
               color: Colors.lightBlueAccent,
               fontWeight: FontWeight.bold,
             ),),
 
-            Text('CONVERT',style: TextStyle(
+            const Text('CONVERT',style: TextStyle(
 
               fontSize: 50,
               color: Colors.amber,
@@ -46,11 +46,11 @@ class _homePageState extends State<homePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
 
-               unitBlock(Color(0xffff3040), 'Length', size.width*0.35,size.width*0.39, context, LengthPage()),
+               unitBlock(const Color(0xffff3040), 'Length', size.width*0.35,size.width*0.39, context, const LengthPage()),
 
 
 
-                unitBlock(Color(0xffb620e1), 'Weight', size.width*0.35,size.width*0.39, context, weightPage()),
+                unitBlock(const Color(0xffb620e1), 'Weight', size.width*0.35,size.width*0.39, context, const weightPage()),
               ],
             ),
 
@@ -59,9 +59,9 @@ class _homePageState extends State<homePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                unitBlock(Color(0xff13b3d7), 'Temperature', size.width*0.35,size.width*0.39, context, tempPage()),
+                unitBlock(const Color(0xff13b3d7), 'Temperature', size.width*0.35,size.width*0.39, context, const tempPage()),
 
-                unitBlock(Color(0xffffb94d), 'Time', size.width*0.35,size.width*0.39, context, timePage())
+                unitBlock(const Color(0xffffb94d), 'Time', size.width*0.35,size.width*0.39, context, const timePage())
               ],
             ),
 
@@ -70,9 +70,9 @@ class _homePageState extends State<homePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                unitBlock(Color(0xfffd5d2d), 'Speed', size.width*0.35,size.width*0.39, context, speedPage()),
+                unitBlock(const Color(0xfffd5d2d), 'Speed', size.width*0.35,size.width*0.39, context, const speedPage()),
 
-                unitBlock(Color(0xff8ad53c), 'Currency', size.width*0.35,size.width*0.39, context, currencyPage())
+                unitBlock(const Color(0xff8ad53c), 'Currency', size.width*0.35,size.width*0.39, context, const currencyPage())
               ],
             ),
           ],
