@@ -134,7 +134,9 @@ class _tempPageState extends State<tempPage> {
                         padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                         child: TextField(
                           keyboardType: TextInputType.number,
+                          style: TextStyle(fontSize: 30),
                           decoration: const InputDecoration(
+                            hintText: '0.0',
                             border: InputBorder.none,
                           ),
                           onChanged: (value) {
@@ -217,23 +219,13 @@ class _tempPageState extends State<tempPage> {
                       ),),
                     ),
 
-
-
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
-                        child: TextField(
-                          keyboardType: TextInputType.number, // Allow numeric input
-                          decoration: const InputDecoration(
-                            border: InputBorder.none, // Remove the bottom line
-                          ),
-                          onChanged: (value) {
-                            // Handle the input value
-                            if (double.tryParse(value) != null) {
-                              inputValue = double.parse(value);
-                              convert();
-                            }
-                          },
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
+                      child: Text(
+                        '$result', // Display the result value
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 30,
                         ),
                       ),
                     ),
@@ -244,37 +236,7 @@ class _tempPageState extends State<tempPage> {
 
             SizedBox(height: size.height * 0.04),
 
-            Container(
-              height: size.height*0.15,
-              width: size.width*0.45,
-              color: Colors.white,
 
-              child: Column(
-                children: [
-                  SizedBox(height: size.height * 0.02),
-
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 5, 0, 9),
-                    child: Text(
-                      '$result', // Display the result value
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 30,
-                      ),
-                    ),
-                  ),
-
-
-
-                  const Text('Result',style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),)
-                ],
-              ),
-
-            ),
 
             SizedBox(height: size.height * 0.04),
 
