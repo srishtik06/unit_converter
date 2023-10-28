@@ -89,14 +89,9 @@ class _tempPageState extends State<tempPage> {
             Container(
               height: size.height * 0.1,
               width: size.width * 0.8,
-              decoration: const BoxDecoration(
+              decoration:  BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(25),
-                  topRight: Radius.circular(25),
-                  bottomLeft: Radius.circular(25),
-                  bottomRight: Radius.circular(25),
-                ),
+                borderRadius: BorderRadius.circular(25)
               ),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -134,7 +129,8 @@ class _tempPageState extends State<tempPage> {
                         padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                         child: TextField(
                           keyboardType: TextInputType.number,
-                          style: TextStyle(fontSize: 30),
+                          style: TextStyle(fontSize: 30,
+                          color: Colors.black54),
                           decoration: const InputDecoration(
                             hintText: '0.0',
                             border: InputBorder.none,
@@ -222,7 +218,7 @@ class _tempPageState extends State<tempPage> {
                           child: Text(
                             '$result', // Display the result value
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.black54,
                               fontSize: 30,
                             ),
                           ),

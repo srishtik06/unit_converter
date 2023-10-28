@@ -128,7 +128,8 @@ class _timePageState extends State<timePage> {
                         padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                         child: TextField(
                           keyboardType: TextInputType.number,
-                          style: TextStyle(fontSize: 30),
+                          style: TextStyle(fontSize: 30,
+                          color: Colors.black54),
                           decoration: const InputDecoration(
                             hintText: '0.0',
                             border: InputBorder.none,
@@ -150,9 +151,9 @@ class _timePageState extends State<timePage> {
             SizedBox(height: size.height * 0.01),
 
             const Icon(
-              Icons.swap_vert, // Add your desired conversion icon
-              size: 68, // Set the size of the icon as desired
-              color: Colors.grey, // Set the color of the icon
+              Icons.swap_vert,
+              size: 68,
+              color: Colors.grey,
             ),
 
             const Align(
@@ -216,7 +217,7 @@ class _timePageState extends State<timePage> {
                           child: Text(
                             '$result', // Display the result value
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.black54,
                               fontSize: 30,
                             ),
                           ),
