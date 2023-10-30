@@ -21,7 +21,7 @@ class _homePageState extends State<homePage> {
     return Scaffold(
       backgroundColor: const Color(0xff324b6a),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+        padding: const EdgeInsets.fromLTRB(31, 0, 30, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
